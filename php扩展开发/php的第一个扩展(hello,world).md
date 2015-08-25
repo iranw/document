@@ -23,21 +23,21 @@ $ cd phpno_com
 ![https://github.com/iranw/document/blob/master/static/phpextension_02.png?raw=true](https://github.com/iranw/document/blob/master/static/phpextension_02.png?raw=true)
 ![https://github.com/iranw/document/blob/master/static/phpextension_03.png?raw=true](https://github.com/iranw/document/blob/master/static/phpextension_03.png?raw=true)
 
-### 3、编辑php_iranw.h文件
-编辑php_iranw.h文件，在`PHP_FUNCTION(confirm_phpno_com_compiled);`下行添加需要添加函数(hello_world)的格式段
+### 3、编辑php_phpno_com.h文件
+编辑php_phpno_com.h文件，在`PHP_FUNCTION(confirm_phpno_com_compiled);`下行添加需要添加函数(hello_world)的格式段
 ```
 PHP_FUNCTION(hello_world);
 ```
 
-### 4、编辑iranw.c文件
+### 4、编辑phpno_com.c文件
 在文件末尾添加函数具体实现 代码如下
 ```
 PHP_FUNCTION(hello_world)
 {
-    printf("hello,world");
+    printf("hello,world \n -order by phpno.com\n");
 }
 ```
-并在`zend_function_entry iranw_functions`代码块里面注册函数，将`PHP_FE(hello_world, NULL)`添加到`PHP_FE_END`上一行。具体如下
+并在`zend_function_entry phpno_com_functions`代码块里面注册函数，将`PHP_FE(hello_world, NULL)`添加到`PHP_FE_END`上一行。具体如下
 ![https://github.com/iranw/document/blob/master/static/phpextension_04.png?raw=true](https://github.com/iranw/document/blob/master/static/phpextension_04.png?raw=true)
 
 
