@@ -15,12 +15,13 @@ $ ./ext_skel --extname=phpno_com
 $ cd phpno_com
 ```
 `注`:目前ext扩展目录已经生成phpno_com扩展框架模块。目录结构如下
-
+![https://github.com/iranw/document/blob/master/static/phpextension_01.png?raw=true](https://github.com/iranw/document/blob/master/static/phpextension_01.png?raw=true)
 
 ### 2、编辑config.m4文件
 
 修改文件10~12行 删除dnl 结果如下
-
+![https://github.com/iranw/document/blob/master/static/phpextension_02.png?raw=true](https://github.com/iranw/document/blob/master/static/phpextension_02.png?raw=true)
+![https://github.com/iranw/document/blob/master/static/phpextension_03.png?raw=true](https://github.com/iranw/document/blob/master/static/phpextension_03.png?raw=true)
 
 ### 3、编辑php_iranw.h文件
 编辑php_iranw.h文件，在`PHP_FUNCTION(confirm_phpno_com_compiled);`下行添加需要添加函数(hello_world)的格式段
@@ -37,6 +38,7 @@ PHP_FUNCTION(hello_world)
 }
 ```
 并在`zend_function_entry iranw_functions`代码块里面注册函数，将`PHP_FE(hello_world, NULL)`添加到`PHP_FE_END`上一行。具体如下
+![https://github.com/iranw/document/blob/master/static/phpextension_04.png?raw=true](https://github.com/iranw/document/blob/master/static/phpextension_04.png?raw=true)
 
 
 ### 5、进入扩展目录`phpno_com`编译扩展
