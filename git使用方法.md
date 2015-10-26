@@ -1,6 +1,7 @@
 
 
-
+###### 配置设置
+```
 #git config user.name “iranw”           //配置变量(本git目录-针对本目录)
 #git config user.email “wang_wenguan@yeah.net” //配置变量 
 #git config --global user.name “iranw”  //配置变量(用户目录-针对本用户)
@@ -10,8 +11,10 @@
 #git help                               //获取帮助信息
 #git help config                            //获取特定帮助信息(方式1)
 #git config --help                      //获取特定帮助信息(方式2)
+```
 
-
+###### 初始化
+```
 #git init                                   //初始化git目录(文件已存在)
 #git clone https://github.com/*.git     //克隆仓库(默认目录为项目名)
 #git clone https://github.com/*/*.git dirname       //克隆仓库到特定目录(dirname)
@@ -21,9 +24,11 @@
 #unmodified 未修改
 #modified       已修改
 #staged         已放入暂存区
+```
 
 
-
+###### 基本知识
+```
 #git status                             //查看当前文件状态
 #git add a.txt                          //开始跟踪某个文件
 #git add --all                          //跟踪所有文件
@@ -70,10 +75,11 @@
 #git tag -a v1.0 -m “标签说明”          //添加标签
 #git show v1.0                          //查看标签信息
 #git push origin v1.0                       //将标签传到服务器
+```
 
 Git保存的不是文件差异或者变化量，而是一系列文件快照
 HEAD是当前分支的别名
-
+```
 #git branch a                           //创建分支
 #git checkout a                         //切换分支
 #git checkout master                    //切换分支
@@ -84,7 +90,10 @@ HEAD是当前分支的别名
 #git branch -v                          //查看分支最后一次提交信息
 #git branch --merged                    //查看并入当前分支的分支
 #git branch --no-merged             //查看未并入当前分支的分支
+```
 
+###### 跟踪分支
+```
 #git branch -vv 查看跟踪分支
 
 #git checkout -b localBranchName origin/remoteBranchName
@@ -92,6 +101,5 @@ HEAD是当前分支的别名
 
 #git branch -u origin/branchName  改变当前分支跟踪的远程分支
 #git branch --set-upstream-to origin/branchName 改变当前分支跟踪的远程分支
-
-
 #git checkout --track origin/remoteBranchName
+```
