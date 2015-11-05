@@ -1,5 +1,2 @@
 /Log/*
-!/Log/
-
-/Log2/*
-!/Log2/
+!/Log/.gitkeep
