@@ -28,3 +28,6 @@ print(value)
 目前redis-lua模块支持lua5.1 & 5.2。目前测试5.3版本出错
 
 `注`:一定设置好`path`&`cpath`变量。否则报错包找不到
+
+[https://luarocks.org/modules/nrk/redis-lua](https://luarocks.org/modules/nrk/redis-lua)
+[https://github.com/nrk/redis-lua](https://github.com/nrk/redis-lua)
