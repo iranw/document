@@ -1,3 +1,73 @@
+
+
+
+###### 聚合demo
+```
+POST /cars/transactions/_search?search_type=count
+{
+    "from" : 0, 
+    "size" : 3,
+    "aggs" : { 
+        "colors" : { 
+            "terms" : {
+              "field" : "color" 
+            },
+            "aggs": { 
+                "avg_price": { 
+                   "avg": {
+                      "field": "price" 
+                   }
+                }
+             }
+        }
+    }
+}
+```
+
+###### 聚合demo 
+```
+POST /cars/transactions/_search?search_type=count
+{
+    "from" : 0, 
+    "size" : 3,
+    "aggs" : { 
+        "colors" : { 
+            "terms" : {
+              "field" : "color" 
+            }
+        }
+    }
+}
+```
+
+###### 聚合demo
+```
+POST /cars/transactions/_search?search_type=count
+{
+    "from" : 0, 
+    "size" : 3,
+    "aggs" : { 
+        "colors" : { 
+            "terms" : {
+              "field" : "color" 
+            },
+            "aggs": { 
+                "avg_price": { 
+                   "avg": {
+                      "field": "price" 
+                   }
+                },
+                "make": { 
+                    "terms": {
+                        "field": "make" 
+                    }
+                }
+             }
+        }
+    }
+}
+```
+
 ###### 范围查询 range
 ```
 POST /ptest/goods/_search
