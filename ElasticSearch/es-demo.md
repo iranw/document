@@ -1,3 +1,22 @@
+###### 范围查询 range
+```
+POST /ptest/goods/_search
+{
+    "query": {        
+        "filtered": {
+            "query":    { "match_all": {}},
+            "filter":   {
+                "range" : {
+                    "age" : {
+                        "gte" : 25,
+                        "lt" :  30
+                    }
+                }
+            }
+        }
+    }
+}
+```
 
 ###### filter+sort
 ```
