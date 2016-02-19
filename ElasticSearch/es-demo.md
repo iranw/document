@@ -1,4 +1,12 @@
-
+###### 全文匹配
+```
+POST /test/_search
+{
+    "query": { 
+        "match_all": {} 
+    }
+}
+```
 
 
 ###### 聚合demo
@@ -230,5 +238,32 @@ POST /ptest/goods/_search
 }
 ```
 
+###### 全文搜索
+```
+POST /ptest/_search
+{
+    "from": 0,
+    "size": 15,
+    "query": {
+        "match": {
+            "_all": "核心编程"
+        }
+    }
+}
+```
+
+###### 特定字段分词验证
+```
+POST /ptest/_search
+{
+    "from": 0,
+    "size": 15,
+    "query": {
+        "match": {
+            "_all": "核心编程"
+        }
+    }
+}
+```
 
 
